@@ -6,9 +6,9 @@
  
  ## Instalação:
  
- Copie conteúdo do o arquivo.env exemplo para um .env e configuro com o nome do DB criado.
+ ### Copie conteúdo do o arquivo.env exemplo para um .env e configuro com o nome do DB criado.
  
- No terminal dentro da pasta do pojeto utilize o comand composer install
+ ### No terminal dentro da pasta do pojeto utilize o comand composer install
  
  
  
