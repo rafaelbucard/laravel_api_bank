@@ -1,7 +1,18 @@
-# laravel_api_bank
+# laravel_api_bank :heavy_dollar_sign:
  Api criada em Laravel com autentificação JWT
  
  **Laravel v8.29.0 (PHP v8.0.0)
+ 
+ 
+ **Instalação:
+ 
+ *Copie conteúdo do o arquivo.env exemplo para um .env e configuro com o nome do DB criado.
+ 
+ *No terminal dentro da pasta do pojeto utilize o comand composer install
+ 
+ 
+ 
+
 
 Endpoint teste: Metodo GET = api/ping Retorna {"pong" :true}
 
