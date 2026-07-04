@@ -4,16 +4,14 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Createalltable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('users', function(Blueprint $table){
+        Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
@@ -27,59 +25,54 @@ class Createalltable extends Migration
             $table->datetime('created_at');
             $table->datetime('updated_at');
         });
-        Schema::create('deposit', function(Blueprint $table){
+
+        Schema::create('deposit', function (Blueprint $table) {
             $table->id();
             $table->integer('id_user');
             $table->string('amount');
             $table->datetime('created_at');
-
         });
-        Schema::create('wallet', function(Blueprint $table){
+
+        Schema::create('wallet', function (Blueprint $table) {
             $table->id();
             $table->integer('id_user');
             $table->string('name');
             $table->string('url');
-
         });
-        Schema::create('verified', function(Blueprint $table){
+
+        Schema::create('verified', function (Blueprint $table) {
             $table->id();
             $table->integer('id_user');
             $table->string('front_doc');
             $table->string('back_doc');
             $table->string('frontuser');
-
         });
-        Schema::create('balance', function(Blueprint $table){
+
+        Schema::create('balance', function (Blueprint $table) {
             $table->id();
             $table->integer('id_user');
             $table->string('values');
-
         });
-        Schema::create('withdraw', function(Blueprint $table){
+
+        Schema::create('withdraw', function (Blueprint $table) {
             $table->id();
             $table->integer('id_verified');
             $table->string('amount');
             $table->datetime('request_date');
             $table->datetime('approval')->nullable();
-     
-
         });
-        Schema::create('profitability', function(Blueprint $table){
+
+        Schema::create('profitability', function (Blueprint $table) {
             $table->id();
             $table->integer('id_deposit');
             $table->string('amount');
         });
-    
-
-
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('users');
         Schema::dropIfExists('deposit');
@@ -88,6 +81,5 @@ class Createalltable extends Migration
         Schema::dropIfExists('balance');
         Schema::dropIfExists('withdraw');
         Schema::dropIfExists('profitability');
-
     }
-}
+};
