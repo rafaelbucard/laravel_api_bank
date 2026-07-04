@@ -10,7 +10,7 @@
     "require": {
         "php": "^8.3",
         "laravel/framework": "^13.0",
-        "laravel/tinker": "^2.10",
+        "laravel/tinker": "^3.0",
         "tymon/jwt-auth": "^2.3"
     },
     "require-dev": {
